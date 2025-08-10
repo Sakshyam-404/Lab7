@@ -54,7 +54,7 @@ int main(){
 
     Bus b;
     Car c;
-    Bike Bi;
+    Bike Bi,*bi;
     v[0]=&b;
     v[1]=&c;
     v[2]=&Bi;
@@ -62,8 +62,8 @@ int main(){
     cout<<typeid(*v[i]).name()<<endl;
     }
     //dyanmic casting
-   v[4] =dynamic_cast<Vehicle*>(v[0]); //bus to bi
-    cout<<typeid(*v[4]).name();
+    bi = dynamic_cast<Bike*>(v[2]); //vec to bike
+    cout<<typeid(*v[2]).name();
     
 
 
